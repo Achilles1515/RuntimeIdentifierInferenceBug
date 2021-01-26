@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" InitialTargets="test">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <!--<PlatformTarget>x64</PlatformTarget>-->
+    <!--<Prefer32Bit>true</Prefer32Bit>-->
+  </PropertyGroup>
+
+  <Target Name="test">
+    <Message Importance="high" Text="PlatformTarget: $(PlatformTarget)" />
+    <Message Importance="high" Text="RuntimeIdentifier: $(RuntimeIdentifier)" />
+    <Message Importance="high" Text="_UsingDefaultRuntimeIdentifier: $(_UsingDefaultRuntimeIdentifier)" />
+    <Message Importance="high" Text="_UsingDefaultPlatformTarget: $(_UsingDefaultPlatformTarget)" />
+    <Message Importance="high" Text="Prefer32Bit: $(Prefer32Bit)" />
+  </Target>
+
+
+  <ItemGroup>
+    <PackageReference Include="RE2.Managed" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
